@@ -70,9 +70,3 @@ The table below shows the samples from the taxi_zone_lookup.csv:
 |5         |Staten Island      |Arden Heights          |Boro Zone   |
 
 As you can see, the pickup_location/dropoff_location fields in rideshare_data.csv are encoded with numbers that you can find the counterpart number (LocationID field) in taxi_zone_lookup.csv. You need to join the two datasets by using the mentioned fields. Before you go to the assignment part, there are three notes you need to understand about the taxi_zone_lookup.csv, (1): The LocationID 264 and 265 are **Unknown** in the Borough field, we see the 'Unknown' as one of the borough names; (2) In the Borough field, you can see the same Borough has different LocationIDs, it does not matter because you use LocationID (Unique Key) to apply 'Join'function; and (3) if you see any obscure description (like NV, NA, N/A, etc) in any fields, purely see it as the valid names.
-
-    | id  | pagerank            |
-    |-----|---------------------|
-    | 265 | 11.105433344108409  |
-    | 1   | 5.4718454249206525  |
-    | ... | ...                 |
