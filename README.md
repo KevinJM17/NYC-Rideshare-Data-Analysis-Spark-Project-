@@ -1,6 +1,4 @@
-# NYC-Rideshare-Data-Analysis-Spark-Project-
-
-# NYC Rideshare Analysis
+# NYC Rideshare Data Analysis
 
 In the Coursework, you will apply Spark techniques to the NYC Rideshare dataset, which focuses on analyzing the New York 'Uber/Lyft' data from January 1, 2023, to May 31, 2023. Source data pre-processed was provided by the NYC Taxi and Limousine Commission (TLC) Trip Record Data hosted by the state of New York. The dataset used in the Coursework is distributed under the MIT license. The source of the datasets is available on this link:
 
