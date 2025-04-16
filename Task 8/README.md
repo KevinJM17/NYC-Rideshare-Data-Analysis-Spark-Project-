@@ -56,8 +56,8 @@ Note, the tables provided in task 8 are from my results, you may or may not have
 
 ## Outputs
 - Edges and vertices dataframes
-<img src="Outputs/edges.png" width="700" height="500" align="left" />
-<img src="Outputs/vertices.png" width="100" height="500" align="right" />
+<img src="Outputs/edges.png" width="400" height="300" align="left" />
+<img src="Outputs/vertices.png" width="100" height="300" align="right" />
 <!-- ![alt img](Outputs/edges.png) -->
 <!-- vertices -->
 
