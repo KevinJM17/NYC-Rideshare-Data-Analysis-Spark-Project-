@@ -27,7 +27,7 @@
 3. The date field uses a UNIX timestamp, you need to convert the UNIX timestamp to the "yyyy-MM-dd" format. For example, '1684713600' to '2023-05-22'. UNIX timestamp represents the number of seconds elapsed since January 1, 1970, UTC. However, in this dataframe, the UNIX timestamp is converted from (yyyy-MM-dd) without the specific time of day (hh-mm-ss). For example, the '1684713600' is converted from '2023-05-22'.
 4. After performing the above operations, print the number of rows (69725864) and schema of the new dataframe in the terminal. Verify that your schema matches the above resulting schemas. You need to provide the screenshots of your scheme and the number of rows in your report.
 
-## Output
+
 ## Code explanation and API used:
 - __spark.read.option("header", True).csv()__ is used to read a CSV file into a dataframe, and “header” = True states that the first row of the CSV file contains the header. Using this, 2 dataframes are created.
 - The __.join()__ API is used to perform inner join on the 2 dataframes (rideshare data and taxi zone lookup) on the condition that the pickup location in the rideshare data is the same as the location ID in the taxi zone lookup.
