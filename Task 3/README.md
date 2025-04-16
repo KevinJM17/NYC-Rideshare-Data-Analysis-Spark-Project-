@@ -1,5 +1,5 @@
-## Task 3 (25 points): Top-K Processing
-1. (7 points) Identify the top 5 popular pickup boroughs each month. you need to provide a screenshot of your result in your report. The columns should include, Pickup_Borough, Month, and trip_count. you need to sort the output by trip_count by descending in each month. For example,
+## Task 3: Top-K Processing
+1. Identify the top 5 popular pickup boroughs each month. you need to provide a screenshot of your result in your report. The columns should include, Pickup_Borough, Month, and trip_count. you need to sort the output by trip_count by descending in each month. For example,
 
 | Pickup_Borough | Month | trip_count |  
 |----------------|-------|------------|  
@@ -11,7 +11,7 @@
 | ...            | ...   | ...        |
 
 Note, that the above figures/values of the trip_count field do not represent the actual result.
-2. (7 points) Identify the top 5 popular dropoff boroughs each month. you need to provide a screenshot of your result in your report. The columns should include, Dropoff_Borough, Month, and trip_count. you need to sort the output by trip count by descending in each month. For example,
+2. Identify the top 5 popular dropoff boroughs each month. you need to provide a screenshot of your result in your report. The columns should include, Dropoff_Borough, Month, and trip_count. you need to sort the output by trip count by descending in each month. For example,
 
 | Dropoff_Borough | Month | trip_count |  
 |-----------------|-------|------------|  
@@ -23,7 +23,7 @@ Note, that the above figures/values of the trip_count field do not represent the
 | ...             | ...   | ...        |
 
 Note, that the above figures/values of the trip_count field do not represent the actual result.
-3. (8 points) Identify the top 30 earnest routes. Use 'Pickup Borough' to 'Dropoff_Borough' as route, and use the sum of 'driver_total_pay' field as the profit, then you will have a route and total_profit relationship. The columns should include Route and total_profit. You need to provide a screenshot of your results in your report. Do not truncate the name of routes. For example,
+3. Identify the top 30 earnest routes. Use 'Pickup Borough' to 'Dropoff_Borough' as route, and use the sum of 'driver_total_pay' field as the profit, then you will have a route and total_profit relationship. The columns should include Route and total_profit. You need to provide a screenshot of your results in your report. Do not truncate the name of routes. For example,
 
 | Route                | total_profit |     
 |----------------------|--------------|   
