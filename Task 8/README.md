@@ -70,3 +70,7 @@ Note, the tables provided in task 8 are from my results, you may or may not have
 ![alt img](Outputs/connected_vertices.png)
 
 Count = 46886992
+
+- Pagerank on the graph dataframe
+<!-- <img src="Outputs/trips.png" width="500" height="500" align="left" /> -->
+![alt img](Outputs/pagerank.png)
