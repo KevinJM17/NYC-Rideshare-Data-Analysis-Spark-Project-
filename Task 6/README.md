@@ -53,3 +53,5 @@
 - Trips that started in Brooklyn and ended in Staten Island and the number of trips
 <!-- <img src="Outputs/trips.png" width="500" height="500" align="left" /> -->
 ![alt img](Outputs/brooklyn_staten_trips.png)
+
+Number of Trips = 69437
