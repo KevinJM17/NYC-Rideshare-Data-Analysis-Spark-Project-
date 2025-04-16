@@ -28,7 +28,7 @@
 4. After performing the above operations, print the number of rows (69725864) and schema of the new dataframe in the terminal. Verify that your schema matches the above resulting schemas. You need to provide the screenshots of your scheme and the number of rows in your report.
 
 ## Output
-Code explanation and API used:
+## Code explanation and API used:
 - __spark.read.option("header", True).csv()__ is used to read a CSV file into a dataframe, and “header” = True states that the first row of the CSV file contains the header. Using this, 2 dataframes are created.
 - The __.join()__ API is used to perform inner join on the 2 dataframes (rideshare data and taxi zone lookup) on the condition that the pickup location in the rideshare data is the same as the location ID in the taxi zone lookup.
 - The __.withColumnRenamed()__ API is used to rename the columns after the performing the join operation.
@@ -38,9 +38,10 @@ Code explanation and API used:
 - __.printSchema()__ is used to print the schema of the dataframe, including column names and data type.
 
 
-Final dataframe with “date” column converted from UNIX timestamp to yyyy-MM-dd format.
+## Output
+- Final dataframe with “date” column converted from UNIX timestamp to yyyy-MM-dd format.
 <img src="Outputs/dataframe.png" alt="alt img" align="left" />
 
 
-Number of row and schema of the final dataframe.
+- Number of row and schema of the final dataframe.
 <img src="Outputs/dataframe_schema.png" alt="alt img" align="left" />
