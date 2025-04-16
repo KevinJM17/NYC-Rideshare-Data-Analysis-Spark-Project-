@@ -94,8 +94,8 @@ There are two separate files you need to submit, (1) a PDF file, and (2) a Zip f
 Below are the tasks with different weights. Please read each task carefully, and give the complete Spark solutions for getting full marks. Also, task 1 is very important as some of the remaining tasks might use task 1 results.
 
 ### Task 1 (15 points): Merging Datasets
-(2 points) Load rideshare_data.csv and taxi_zone_lookup.csv.
-(5 points) Apply the 'join' function based on fields pickup_location and dropoff_location of rideshare_data table and the LocationID field of taxi_zone_lookup table, and rename those columns as Pickup_Borough, Pickup_Zone, Pickup_service_zone , Dropoff_Borough, Dropoff_Zone, Dropoff_service_zone. The join needs to be done in two steps. once using pickup_location and then output result is joined using dropoff_location. you will have a new dataframe (as shown below) with six new columns added to the original dataset.
+1. (2 points) Load rideshare_data.csv and taxi_zone_lookup.csv.
+2. (5 points) Apply the 'join' function based on fields pickup_location and dropoff_location of rideshare_data table and the LocationID field of taxi_zone_lookup table, and rename those columns as Pickup_Borough, Pickup_Zone, Pickup_service_zone , Dropoff_Borough, Dropoff_Zone, Dropoff_service_zone. The join needs to be done in two steps. once using pickup_location and then output result is joined using dropoff_location. you will have a new dataframe (as shown below) with six new columns added to the original dataset.
 
 |-- business: string (nullable = true)
 |-- pickup_location: string (nullable = true)
@@ -119,18 +119,18 @@ Below are the tasks with different weights. Please read each task carefully, and
 |-- Dropoff_Zone: string (nullable = true)
 |-- Dropoff_service_zone: string (nullable = true)
 
-(5 points) The date field uses a UNIX timestamp, you need to convert the UNIX timestamp to the "yyyy-MM-dd" format. For example, '1684713600' to '2023-05-22'. UNIX timestamp represents the number of seconds elapsed since January 1, 1970, UTC. However, in this dataframe, the UNIX timestamp is converted from (yyyy-MM-dd) without the specific time of day (hh-mm-ss). For example, the '1684713600' is converted from '2023-05-22'.
-(3 points) After performing the above operations, print the number of rows (69725864) and schema of the new dataframe in the terminal. Verify that your schema matches the above resulting schemas. You need to provide the screenshots of your scheme and the number of rows in your report.
+3. (5 points) The date field uses a UNIX timestamp, you need to convert the UNIX timestamp to the "yyyy-MM-dd" format. For example, '1684713600' to '2023-05-22'. UNIX timestamp represents the number of seconds elapsed since January 1, 1970, UTC. However, in this dataframe, the UNIX timestamp is converted from (yyyy-MM-dd) without the specific time of day (hh-mm-ss). For example, the '1684713600' is converted from '2023-05-22'.
+4. (3 points) After performing the above operations, print the number of rows (69725864) and schema of the new dataframe in the terminal. Verify that your schema matches the above resulting schemas. You need to provide the screenshots of your scheme and the number of rows in your report.
 
 ### Task 2 (20 points): Aggregation of Data
-(6 points) Count the number of trips for each business in each month. Draw the histogram with 'business-month' on the x-axis and trip counts on the y-axis. For example, assume if the number of trips for Uber in January (i.e. 'Uber-1') is 222222222, 'Uber-1' will be on the x-axis, indicating 222222222 above the bar of 'Uber-1'.
-(6 points) Calculate the platform's profits (rideshare_profit field) for each business in each month. Draw the histogram with 'business-month' on the x-axis and the platform's profits on the y-axis. For example, assume if the platform's profits for Uber in January is 33333333, 'Uber-1' will be on the x-axis, indicating 33333333 above the bar of 'Uber-1'.
-(5 points) Calculate the driver's earnings (driver_total_pay field) for each business in each month. Draw the histogram with 'business-month' on the x-axis and the driver's earnings on the y-axis. For example, assume if the driver's earnings for Uber in January is 4444444, 'Uber-1' will be on the x-axis, indicating 4444444 above the bar of 'Uber-1'.
-(3 points) When we are analyzing data, it's not just about getting results, but also about extracting insights to make decisions or understand the market. Suppose you were one of the stakeholders, for example, the driver, CEO of the business, stockbroker, etc, What do you find from the three results? How do the findings help you make strategies or make decisions?
+1. (6 points) Count the number of trips for each business in each month. Draw the histogram with 'business-month' on the x-axis and trip counts on the y-axis. For example, assume if the number of trips for Uber in January (i.e. 'Uber-1') is 222222222, 'Uber-1' will be on the x-axis, indicating 222222222 above the bar of 'Uber-1'.
+2. (6 points) Calculate the platform's profits (rideshare_profit field) for each business in each month. Draw the histogram with 'business-month' on the x-axis and the platform's profits on the y-axis. For example, assume if the platform's profits for Uber in January is 33333333, 'Uber-1' will be on the x-axis, indicating 33333333 above the bar of 'Uber-1'.
+3. (5 points) Calculate the driver's earnings (driver_total_pay field) for each business in each month. Draw the histogram with 'business-month' on the x-axis and the driver's earnings on the y-axis. For example, assume if the driver's earnings for Uber in January is 4444444, 'Uber-1' will be on the x-axis, indicating 4444444 above the bar of 'Uber-1'.
+4. (3 points) When we are analyzing data, it's not just about getting results, but also about extracting insights to make decisions or understand the market. Suppose you were one of the stakeholders, for example, the driver, CEO of the business, stockbroker, etc, What do you find from the three results? How do the findings help you make strategies or make decisions?
 Note, that the above figures/values do not represent the actual result.
 
 ### Task 3 (25 points): Top-K Processing
-(7 points) Identify the top 5 popular pickup boroughs each month. you need to provide a screenshot of your result in your report. The columns should include, Pickup_Borough, Month, and trip_count. you need to sort the output by trip_count by descending in each month. For example,
+1. (7 points) Identify the top 5 popular pickup boroughs each month. you need to provide a screenshot of your result in your report. The columns should include, Pickup_Borough, Month, and trip_count. you need to sort the output by trip_count by descending in each month. For example,
 
 | Pickup_Borough | Month | trip_count |  
 |----------------|-------|------------|  
@@ -142,7 +142,7 @@ Note, that the above figures/values do not represent the actual result.
 | ...            | ...   | ...        |
 
 Note, that the above figures/values of the trip_count field do not represent the actual result.
-(7 points) Identify the top 5 popular dropoff boroughs each month. you need to provide a screenshot of your result in your report. The columns should include, Dropoff_Borough, Month, and trip_count. you need to sort the output by trip count by descending in each month. For example,
+2. (7 points) Identify the top 5 popular dropoff boroughs each month. you need to provide a screenshot of your result in your report. The columns should include, Dropoff_Borough, Month, and trip_count. you need to sort the output by trip count by descending in each month. For example,
 
 | Dropoff_Borough | Month | trip_count |  
 |-----------------|-------|------------|  
@@ -154,7 +154,7 @@ Note, that the above figures/values of the trip_count field do not represent the
 | ...             | ...   | ...        |
 
 Note, that the above figures/values of the trip_count field do not represent the actual result.
-(8 points) Identify the top 30 earnest routes. Use 'Pickup Borough' to 'Dropoff_Borough' as route, and use the sum of 'driver_total_pay' field as the profit, then you will have a route and total_profit relationship. The columns should include Route and total_profit. You need to provide a screenshot of your results in your report. Do not truncate the name of routes. For example,
+3. (8 points) Identify the top 30 earnest routes. Use 'Pickup Borough' to 'Dropoff_Borough' as route, and use the sum of 'driver_total_pay' field as the profit, then you will have a route and total_profit relationship. The columns should include Route and total_profit. You need to provide a screenshot of your results in your report. Do not truncate the name of routes. For example,
 
 | Route                | total_profit |     
 |----------------------|--------------|   
@@ -163,10 +163,10 @@ Note, that the above figures/values of the trip_count field do not represent the
 | ...                  | ...          |
 
 Note, that the above figures/values of the total_profit field do not represent the actual result.
-(3 points) Suppose you were one of the stakeholders, for example, either the driver, CEO of the business, or stockbroker, etc, What do you find (i.e., insights) from the previous three results? How do the findings help you make strategies or make decisions?
+4. (3 points) Suppose you were one of the stakeholders, for example, either the driver, CEO of the business, or stockbroker, etc, What do you find (i.e., insights) from the previous three results? How do the findings help you make strategies or make decisions?
 
 ### Task 4 (15 points): Average of Data
-(4 points) Calculate the average 'driver_total_pay' during different 'time_of_day' periods to find out which 'time_of_day' has the highest average 'driver_total_pay'. You need to provide a screenshot of this question in your report. The columns should include, time_of_day, average_drive_total_pay. You need to sort the output by average_drive_total_pay by descending. For example,
+1. (4 points) Calculate the average 'driver_total_pay' during different 'time_of_day' periods to find out which 'time_of_day' has the highest average 'driver_total_pay'. You need to provide a screenshot of this question in your report. The columns should include, time_of_day, average_drive_total_pay. You need to sort the output by average_drive_total_pay by descending. For example,
 
 | time_of_day | average_drive_total_pay | 
 |-------------|-------------------------|
@@ -176,7 +176,7 @@ Note, that the above figures/values of the total_profit field do not represent t
 | morning     |           18            |
 
 Note, that the above figures/values for average_driver_total_pay do not represent the actual result.
-(4 points) Calculate the average 'trip_length' during different time_of_day periods to find out which 'time_of_day' has the highest average 'trip_length'. You need to provide a screenshot of this question in your report. The columns should include, time_of_day, average_trip_length. You need to sort the output by average_trip_length by descending. For example,
+2. (4 points) Calculate the average 'trip_length' during different time_of_day periods to find out which 'time_of_day' has the highest average 'trip_length'. You need to provide a screenshot of this question in your report. The columns should include, time_of_day, average_trip_length. You need to sort the output by average_trip_length by descending. For example,
 
 | time_of_day | average_trip_length | 
 |-------------|--------------------|
@@ -186,7 +186,7 @@ Note, that the above figures/values for average_driver_total_pay do not represen
 | evening     |          18        |
 
 Note, that the above figures/values for average_trip_length do not represent the actual result.
-(5 points) Use the above two results to calculate the average earned per mile for each time_of_day period. You need to use 'join' function first and use average_drive_total_pay divided by average_trip_length to get the average_earning_per_mile. You need to provide a screenshot of this question in your report. The columns should include, time_of_day, and average_earning_per_mile. For example,
+3. (5 points) Use the above two results to calculate the average earned per mile for each time_of_day period. You need to use 'join' function first and use average_drive_total_pay divided by average_trip_length to get the average_earning_per_mile. You need to provide a screenshot of this question in your report. The columns should include, time_of_day, and average_earning_per_mile. For example,
 
 | time_of_day | average_earning_per_mile | 
 |-------------|-------------------------|
@@ -196,15 +196,15 @@ Note, that the above figures/values for average_trip_length do not represent the
 | evening     |           8            |
 
 Note, that the above figures/values for average_earning_per_mile do not represent the actual result.
-(2 points) What do you find (i.e., insights) from the three results? How do the findings help you make strategies or make decisions?
+4. (2 points) What do you find (i.e., insights) from the three results? How do the findings help you make strategies or make decisions?
 
 ### Task 5 (15 points): Finding anomalies
-(10 points) Extract the data in January and calculate the average waiting time (use the "request_to_pickup" field) over time. You need to sort the output by day. Draw the histogram with 'days' on the x-axis and ‘average waiting time’ on the y-axis. For example, assume that the ‘average waiting time on 'January 10' is '999', '10' will be on the x-axis, indicating the average waiting time value of 999 for day 10 in January.
-(3 points) Which day(s) does the average waiting time exceed 300 seconds?
-(2 points) Why was the average waiting time longer on these day(s) compared to other days?
+1. (10 points) Extract the data in January and calculate the average waiting time (use the "request_to_pickup" field) over time. You need to sort the output by day. Draw the histogram with 'days' on the x-axis and ‘average waiting time’ on the y-axis. For example, assume that the ‘average waiting time on 'January 10' is '999', '10' will be on the x-axis, indicating the average waiting time value of 999 for day 10 in January.
+2. (3 points) Which day(s) does the average waiting time exceed 300 seconds?
+3. (2 points) Why was the average waiting time longer on these day(s) compared to other days?
 
 ### Task 6 (15 points): Filtering Data
-(5 points) Find trip counts greater than 0 and less than 1000 for different 'Pickup_Borough' at different 'time_of_day'. You need to provide a screenshot of this question in your report. The columns should include, Pickup_Borough, time_of_day, and trip_count. For example,
+1. (5 points) Find trip counts greater than 0 and less than 1000 for different 'Pickup_Borough' at different 'time_of_day'. You need to provide a screenshot of this question in your report. The columns should include, Pickup_Borough, time_of_day, and trip_count. For example,
 
 | Pickup_Borough | time_of_day | trip_count |
 |----------------|-------------|------------|
@@ -214,7 +214,7 @@ Note, that the above figures/values for average_earning_per_mile do not represen
 
 Note, that the above figures/values for trip_count do not represent the actual result.
 
-(5 points) Calculate the number of trips for each 'Pickup_Borough' in the evening time (i.e., time_of_day field). You need to provide a screenshot of this question in your report. The columns should include, Pickup_Borough, time_of_day, trip_count. For example,
+2. (5 points) Calculate the number of trips for each 'Pickup_Borough' in the evening time (i.e., time_of_day field). You need to provide a screenshot of this question in your report. The columns should include, Pickup_Borough, time_of_day, trip_count. For example,
 
 | Pickup_Borough | time_of_day | trip_count |
 |----------------|-------------|------------|
@@ -224,7 +224,7 @@ Note, that the above figures/values for trip_count do not represent the actual r
 
 Note, that the above figures/values for trip_count do not represent the actual result.
 
-(5 points) Calculate the number of trips that started in Brooklyn (Pickup_Borough field) and ended in Staten Island (Dropoff_Borough field). Show 10 samples in the terminal. You need to provide a screenshot of this question (the 10 samples) and the number of trips in your report. The columns should include, Pickup_Borough, Dropoff_Borough, and Pickup_Zone. do not truncate the name of Pickup_Zone. For example,
+3. (5 points) Calculate the number of trips that started in Brooklyn (Pickup_Borough field) and ended in Staten Island (Dropoff_Borough field). Show 10 samples in the terminal. You need to provide a screenshot of this question (the 10 samples) and the number of trips in your report. The columns should include, Pickup_Borough, Dropoff_Borough, and Pickup_Zone. do not truncate the name of Pickup_Zone. For example,
 
 | Pickup_Borough | Pickup_Borough   | Pickup_Zone |
 |----------------|------------------|-------------|
@@ -234,7 +234,7 @@ Note, that the above figures/values for trip_count do not represent the actual r
 Note, that the above record is just one of my results, you may or may not have the same record.
 
 ### Task 7 (15 points): Routes Analysis
-(15 points) You need to analyse the 'Pickup_Zone' to 'Dropoff_Zone' routes to find the top 10 popular routes in terms of the trip count. Each total count of a route should include the trip counts for each unique route from Uber and Lyft (i.e., the sum of Uber and Lyft counts on the same route). Then you can get the top 10 in total count (e.g., sorting the result by total counts and displaying the top 10 routes or any other way). You may need to create a new column called Route which concats column Pickup_Zone with 'to' with column Dropoff_Zone. You need to give a screenshot of your result in your report, do not truncate the name of routes. The result table should include 'route', 'uber_count', 'lyft_count', and 'total_count'. For example,
+1. (15 points) You need to analyse the 'Pickup_Zone' to 'Dropoff_Zone' routes to find the top 10 popular routes in terms of the trip count. Each total count of a route should include the trip counts for each unique route from Uber and Lyft (i.e., the sum of Uber and Lyft counts on the same route). Then you can get the top 10 in total count (e.g., sorting the result by total counts and displaying the top 10 routes or any other way). You may need to create a new column called Route which concats column Pickup_Zone with 'to' with column Dropoff_Zone. You need to give a screenshot of your result in your report, do not truncate the name of routes. The result table should include 'route', 'uber_count', 'lyft_count', and 'total_count'. For example,
 
     | Route                | uber_count | lyft_count | total_count |
     |----------------------|------------|------------|-------------|
@@ -247,8 +247,8 @@ Note, that the above figures/values for uber_count, lyft_count, and total_countd
 ### OPTIONAL - Task 8 (20 points): Graph Processing
 Note, the tables provided in task 8 are from my results, you may or may not have the same results depending on how you process and show results.
 
-(2 points) define the StructType of vertexSchema and edgeSchema. Use the taxi_zone_lookup.csv as vertex information and the 'pickup_location' field and the 'dropoff_location' field of rideshare_data.csv as 'src' and 'dst' information.
-(4 points) construct edges dataframe, and vertices dataframe. Show 10 samples of the edges dataframe and vertices dataframe. You need to give a screenshot of your results in your report. Do not truncate the name of fields. The vertices table should include 'id', 'Borough', 'Zone', and 'service_zone'. The edges table should include 'src', 'dst'. For example,
+1. (2 points) Define the StructType of vertexSchema and edgeSchema. Use the taxi_zone_lookup.csv as vertex information and the 'pickup_location' field and the 'dropoff_location' field of rideshare_data.csv as 'src' and 'dst' information.
+2. (4 points) Construct edges dataframe, and vertices dataframe. Show 10 samples of the edges dataframe and vertices dataframe. You need to give a screenshot of your results in your report. Do not truncate the name of fields. The vertices table should include 'id', 'Borough', 'Zone', and 'service_zone'. The edges table should include 'src', 'dst'. For example,
 
     | id | Borough | Zone                      | service_zone |
     |----|---------|---------------------------|--------------|
@@ -264,7 +264,7 @@ Note, the tables provided in task 8 are from my results, you may or may not have
     | 151 | 138 |
     | ... | ... |
     
-(4 points) Create a graph using the vertices and edges. Print 10 samples of the graph DataFrame with columns ‘src’, ‘edge’, and ‘dst’. You need to give a screenshot of your results in your report. For example,
+3. (4 points) Create a graph using the vertices and edges. Print 10 samples of the graph DataFrame with columns ‘src’, ‘edge’, and ‘dst’. You need to give a screenshot of your results in your report. For example,
 
     | src                                                     | edge              | dst                                                    | 
     |---------------------------------------------------------|-------------------|--------------------------------------------------------|
@@ -272,7 +272,7 @@ Note, the tables provided in task 8 are from my results, you may or may not have
     | [244, Manhattan, Washington Heights South, Boro Zone]   | [244, 78]         | [78, Bronx, East Tremont, Boro Zone]                 |  
     | ...                                                     | ...               | ...                                                    |  
     
-(5 points) count connected vertices with the same Borough and same service_zone. And, select 10 samples from your result. The table colums should include 'id'(src), 'id'(dst), 'Borough', and 'service_zone'. You need to give a screenshot of your 10 samples and the number of counts in your report. For example,
+4. (5 points) Count connected vertices with the same Borough and same service_zone. And, select 10 samples from your result. The table colums should include 'id'(src), 'id'(dst), 'Borough', and 'service_zone'. You need to give a screenshot of your 10 samples and the number of counts in your report. For example,
 
     | id  | id  | Borough | service_zone |
     |-----|-----|---------|--------------|
@@ -282,7 +282,7 @@ Note, the tables provided in task 8 are from my results, you may or may not have
     | 20  | 20  | Bronx   | Boro Zone    |
     | ... | ... | ...     | ...          |
     
-(5 points) perform page ranking on the graph dataframe. You will set the 'resetProbability' to 0.17 and 'tol' to 0.01. And sort vertices by descending according to the value of PageRank. 'Show the 5 samples of your results. You need to give a screenshot of your results in your report. The table columns should include 'id', 'pagerank'. For example:
+5. (5 points) Perform page ranking on the graph dataframe. You will set the 'resetProbability' to 0.17 and 'tol' to 0.01. And sort vertices by descending according to the value of PageRank. 'Show the 5 samples of your results. You need to give a screenshot of your results in your report. The table columns should include 'id', 'pagerank'. For example:
 
     | id  | pagerank            |
     |-----|---------------------|
