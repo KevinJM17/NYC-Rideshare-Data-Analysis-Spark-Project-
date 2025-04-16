@@ -39,7 +39,8 @@ Code explanation and API used:
 
 
 Final dataframe with “date” column converted from UNIX timestamp to yyyy-MM-dd format.
-![alt img](Outputs/dataframe.png)
+<img src="Outputs/dataframe.png" alt="alt img" align="left" />
+
 
 Number of row and schema of the final dataframe.
-![alt img](Outputs/dataframe_schema.png)
+!img align="left"[alt img](Outputs/dataframe_schema.png)
