@@ -13,10 +13,12 @@
 
 ### Outputs
 - Number of trips for each business in each month
-<img src="Outputs/trips.png" width="100" height="100" align="left" />
+<img src="Outputs/trips.png" width="500" height="500" align="left" />
+
 
 - Profits for each business in each month
-<img src="Outputs/profits.png" width="100" height="100" align="left" />
+<img src="Outputs/profits.png" width="500" height="500" align="left" />
+
 
 - Driver’s earning for each business in each month
-<img src="Outputs/driver_earnings.png" width="100" height="100" align="left" />
+<img src="Outputs/driver_earnings.png" width="500" height="500" align="left" />
