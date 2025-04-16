@@ -1,4 +1,4 @@
-### Task 1: Merging Datasets
+## Task 1: Merging Datasets
 1. Load rideshare_data.csv and taxi_zone_lookup.csv.
 2. Apply the 'join' function based on fields pickup_location and dropoff_location of rideshare_data table and the LocationID field of taxi_zone_lookup table, and rename those columns as Pickup_Borough, Pickup_Zone, Pickup_service_zone , Dropoff_Borough, Dropoff_Zone, Dropoff_service_zone. The join needs to be done in two steps. once using pickup_location and then output result is joined using dropoff_location. you will have a new dataframe (as shown below) with six new columns added to the original dataset.
 
